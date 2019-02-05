@@ -7,12 +7,11 @@
 	- Ting-Hung Cheng, Advanced Computing
 
 #### Plan:
-
-	##### Topic
+	- Topic
 		Social connection between UoB computer science students and extend to all UoB students 
-	##### Purpose
+	- Purpose
 		To build up the socail network and provide organised information for each Student
-	##### Stage
+	- Stage
 		- Basic
 			1. Build up login, logut, profile page, and about us page 
 			2. Build up Useful Board, such as information board and second-hand transaction board
