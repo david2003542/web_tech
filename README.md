@@ -2,9 +2,9 @@
 
 
 #### Contributor:
-	- Yu-Ting Lan, Computer Science Conversion
-	- Otto Brooks,  Computer Science Conversion
-	- Ting-Hung Cheng, Advanced Computing
+	- Yu-Ting Lan, cq18784, Computer Science Conversion
+	- Otto Brooks, dl18206,  Computer Science Conversion
+	- Ting-Hung Cheng, hu18727, Advanced Computing
 
 #### Plan:
 	- Topic
