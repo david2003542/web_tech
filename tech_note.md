@@ -1,4 +1,4 @@
-### variable declare difference
+### variable declare difference  -- author by david
 
 1. let: it's a blocked scope.
 2. const: it's a blocked scope and it can't be redeclaired
@@ -7,7 +7,7 @@
 reference: https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e
 
 
-### difference between async await and promise
+### difference between async await and promise -- author by david
 First we will discuss difference between async and sync
 
 The earliest and most straightforward solution to being stuck in the synchronous world was asynchronous callbacks (think setTimeout()).
