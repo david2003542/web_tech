@@ -16,7 +16,7 @@ asynchronous(async) means that you don't need to wait for database or processing
 
 synchronous(sync) means that program will execute line by line
 
-promise: it's the basic concecpt of async. we can use "then()" to recall the result when we want to use it.
+promise: it's the basic technique under async. we can use "then()" to recall the result when we want to use it.
 
 Second we will look though to async/await
 
@@ -26,5 +26,10 @@ Benefits:
 3. Cleans up your syntax and makes your code more human-readable
 
 await: is designed for waiting response from different async function therefore we can use async and await to let code run as synchronous
+
+
+### what is middleware
+
+
 
 
