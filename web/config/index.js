@@ -4,6 +4,7 @@ const env = {
     username: 'root',
     password: 'example',
     host: 'localhost',
+    dialect: 'mysql',
   },
 
 }
