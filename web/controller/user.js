@@ -1,7 +1,7 @@
-const db = require('../config/mariadb.js');
-const User = db.users;
+const models = require("../models")
+const User = models.User;
  
-// Post a User
+// // Post a User
 exports.create = (req, res) => {	
 	// Save to MariaDB database
 	User.create({  
@@ -20,18 +20,18 @@ exports.create = (req, res) => {
 		.catch(error => res.status(400).send(error))
 };
  
-// Fetch all Customers
+// Fetch all Users
 exports.findAll = (req, res) => {
 	User.findAll({
 			attributes: { exclude: ["createdAt", "updatedAt"] }
 		})
-		.then(customers => {
-			res.json(customers);
+		.then(users => {
+			res.json(users);
 		})
 		.catch(error => res.status(400).send(error))
 };
  
-// Find a Customer by Id
+// Find a User by Id
 exports.findById = (req, res) => {	
 	User.findById(req.params.id,
 				{attributes: { exclude: ["createdAt", "updatedAt"] }}
@@ -46,7 +46,7 @@ exports.findById = (req, res) => {
 			.catch(error => res.status(400).send(error));
 };
  
-// Update a Customer
+// Update a User
 exports.update = (req, res) => {
 	return User.findById(req.params.id)
 		.then(
@@ -56,7 +56,7 @@ exports.update = (req, res) => {
 						message: 'User Not Found',
 					});
 				}
-				return customer.update({
+				return user.update({
                     foreName: req.body.foreName,
                     surName: req.body.surName,
                     biography: req.body.biography,
@@ -70,20 +70,20 @@ exports.update = (req, res) => {
 		.catch((error) => res.status(400).send(error));			 
 };
  
-// Delete a Customer by Id
+// Delete a User by Id
 exports.delete = (req, res) => {
 	return User
-					.findById(req.params.id)
-					.then(user => {
-						if(!user) {
-							return res.status(400).send({
-								message: 'User Not Found',
-							});
-						}
- 
-						return user.destroy()
-														.then(() => res.status(200).json({message: "Destroy successfully!"}))
-														.catch(error => res.status(400).send(error));
-					})
-					.catch(error => res.status(400).send(error));
+			.findById(req.params.id)
+			.then(user => {
+				if(!user) {
+					return res.status(400).send({
+						message: 'User Not Found',
+					});
+				}
+
+				return user.destroy()
+												.then(() => res.status(200).json({message: "Destroy successfully!"}))
+												.catch(error => res.status(400).send(error));
+			})
+			.catch(error => res.status(400).send(error));
 };
