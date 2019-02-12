@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 
-class Home extends Component {
+class Society extends Component {
   render() {
     return(
       <div>
-        <h2>ffff</h2>
+        <h2>Society</h2>
       </div>
     );
   }
 }
 
-export default Home
+export default Society
