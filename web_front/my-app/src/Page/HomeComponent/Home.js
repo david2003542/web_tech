@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import {Navbar,NavDropdown,Nav ,Row,Col} from 'react-bootstrap'
+import {Navbar,NavDropdown,Nav} from 'react-bootstrap'
 const Home = () => (
   <div>
     <h2>Home</h2>
