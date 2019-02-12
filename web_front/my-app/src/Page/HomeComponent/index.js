@@ -1,2 +1,2 @@
 export { default as Society } from './Society';
-export { default as Information } from './Information';
+export { default as Home } from './Home';

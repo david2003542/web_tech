@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Home, About } from './Page';
-import { Information, Society } from './Page/HomeComponent';
-
+import { About } from './Page/AboutComonent';
+import { Society, Home } from './Page/HomeComponent';
+import { Information} from './Page/InformationComponent';
+import { SecondHand } from "./Page/SecondHandComponent";
 const App = () => (
   
   <Router>
@@ -11,6 +12,7 @@ const App = () => (
       <Route exact path="/about" component={About} />
       <Route path="/information" component={Information} />
       <Route path="/society" component={Society} />
+      <Route path="/secondhand" component={SecondHand} />
     </div>
   </Router>
 );
