@@ -1,2 +1,3 @@
-export { default as Profile } from './Profile'
-export { default as Detail } from './Detail'
+import About from './About'
+
+export default About
