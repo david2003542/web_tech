@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
+const Information= () => (
+  <div>
+    <h2>Information</h2>
+  </div>
+)
 
-class Information extends Component {
-  render() {
-    return(
-      <div>
-        <h2>Information</h2>
-      </div>
-    );
-  }
-}
 
 export default Information

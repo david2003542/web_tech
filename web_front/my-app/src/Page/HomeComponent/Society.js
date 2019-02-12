@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-
-class Society extends Component {
-  render() {
-    return(
+const Society = () => (
       <div>
         <h2>Society</h2>
       </div>
-    );
-  }
-}
+);
+
 
 export default Society

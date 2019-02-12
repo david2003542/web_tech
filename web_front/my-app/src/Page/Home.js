@@ -1,22 +1,20 @@
-import React, { Component } from 'react'
-import { Route,Router } from 'react-router-dom';
-import {Information, Society} from './HomeComponent';
-import Switch from 'react-router-dom/Switch';
+import React from 'react'
+import { Route,Link } from 'react-router-dom';
+import { Detail} from './AboutComonent'
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+    <navigator>
+      <div><Link to="/">Home</Link></div>
+      <div><Link to="/about">About Us</Link></div>
+      <div><Link to='/information'>Information</Link></div>
+      <div><Link to='/society'>Society</Link></div>
+    </navigator>
+    
 
-class Home extends Component {
-  render() {
-    return(
-      <div>
-         <h2>Home</h2>
-         
-        <Switch>
-          <Route path='/information' component={Information}></Route>
-          <Route path='/Society' component={Society}></Route>
-        </Switch>
-       
-      </div>
-    );
-  }
-}
+  </div>
+
+);
+    
 
 export default Home
