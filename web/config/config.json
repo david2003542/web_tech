@@ -2,10 +2,11 @@
   "development": {
     "username": "root",
     "password": "example",
-    "database": "web",
+    "database": "local_test",
     "host": "localhost",
     "dialect": "mysql",
-    "port": 3306
+    "port": 3308,
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",
