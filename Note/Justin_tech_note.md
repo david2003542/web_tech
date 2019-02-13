@@ -9,3 +9,5 @@
 
 ### React Boostrap
  - Import `Component` from 'react-bootstrap'
+
+### [Connect to Backend API](https://medium.com/@jrshenrique/create-a-react-frontend-a-node-express-backend-and-connect-them-together-c5798926047c)
