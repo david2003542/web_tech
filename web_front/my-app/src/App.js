@@ -1,6 +1,6 @@
 import React, {Component }from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { About } from './Page/AboutComonent';
+import { About } from './Page/AboutComponent';
 import { Society, Home } from './Page/HomeComponent';
 import { Information} from './Page/InformationComponent';
 import { SecondHand } from "./Page/SecondHandComponent";
@@ -12,7 +12,7 @@ class App extends Component{
     this.state = {apiResponse:""};
   }
   callAPI (){
-    fetch("http://localhost:9000/testAPI")
+    fetch("http://localhost:8000/graphql?query={query:hello}")
     .then(res=>res.text())
     .then(res=>this.setState({apiResponse:res}))
     .catch(err=>err);
