@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var graphqlHTTP = require('express-graphql');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -7,6 +8,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+const schema = require("./middleware/graphql")
+
 
 // view engine setup
 app.engine('pug', require('pug').__express)
@@ -20,12 +24,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../web_front/my-app/build')));
 
+
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../web_front/my-app/build', 'index.html'));
 });
 
 
 app.use('/', indexRouter);
+
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: { hello: () => 'Hello world!' },
+  graphiql: true,
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
