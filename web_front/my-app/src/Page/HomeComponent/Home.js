@@ -15,8 +15,9 @@ const Home = (props) => (
                 <Form.Label>Posting</Form.Label>
                 <Form.Control placeholder="Share something today" as="textarea" rows="3" cols="80"/>
                 <ButtonToolbar>
-                  <Button variant="outline-secondary">Film</Button>
-                  <Button variant="outline-secondary">Image</Button>
+                  <Button size='sm' variant="outline-secondary">Film</Button>
+                  <Button size='sm' variant="outline-secondary">Image</Button>
+                  <Button as="input" type="submit" value="Submit" />
                 </ButtonToolbar>
               </Form.Group>
             </Form>
