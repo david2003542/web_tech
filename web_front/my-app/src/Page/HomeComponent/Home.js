@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navbar,NavDropdown,Nav} from 'react-bootstrap'
-const Home = () => (
+const Home = (props) => (
   <div>
     <h2>Home</h2>
     <Navbar  bg="light" expand="lg">
@@ -22,7 +22,8 @@ const Home = () => (
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-    </Navbar>;
+    </Navbar>
+    {props.children}
   </div>
 
 );
