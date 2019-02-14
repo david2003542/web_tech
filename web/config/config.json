@@ -3,7 +3,7 @@
     "username": "root",
     "password": "example",
     "database": "local_test",
-    "host": "localhost",
+    "host": "web",
     "dialect": "mysql",
     "port": 3308,
     "operatorsAliases": false
