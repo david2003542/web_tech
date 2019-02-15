@@ -1,7 +1,7 @@
 import React from 'react'
-import {Container,Row,Col,Form,Button, ButtonToolbar} from 'react-bootstrap'
+import { Container, Row, Col, Form, Button, ButtonToolbar } from 'react-bootstrap'
 import './Home.css'
-const Home = (props) => (
+const Home = () => (
   <div>
     <Container>
       <Row className="justify-content-md-center">
@@ -28,7 +28,7 @@ const Home = (props) => (
         </Col>
       </Row>
     </Container>
-    {props.children}
+    
   </div>
 
 );
