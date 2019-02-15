@@ -5,7 +5,8 @@ import { Society, Home } from './Page/HomeComponent';
 import { Information} from './Page/InformationComponent';
 import { SecondHand } from "./Page/SecondHandComponent";
 import { Signup } from "./Page/SignComponent";
-
+import {Layout} from './Page/LayoutComponent';
+import { SideNav } from './Page/UserComponent';
 
 class App extends Component{
   constructor(props){
@@ -25,14 +26,16 @@ class App extends Component{
     return(
       <Router>
         <div>
-          <p>{this.state.apiResponse}</p>
-        <Home>
-          <Route path="/about" component={About} />
-          <Route path="/information" component={Information} />
-          <Route path="/society" component={Society} />
-          <Route path="/secondhand" component={SecondHand} />
-          <Route path="/signup" component={Signup} />
-        </Home>
+          
+        <Layout>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/information" component={Information} />
+        <Route path="/society" component={Society} />
+        <Route path="/secondhand" component={SecondHand} />
+        <Route path="/setting" component={SideNav} />
+        <p>{this.state.apiResponse}</p>
+        </Layout>
         </div>
       </Router>
     );
