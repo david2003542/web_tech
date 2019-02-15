@@ -5,7 +5,7 @@ import { Society, Home } from './Page/HomeComponent';
 import { Information} from './Page/InformationComponent';
 import { SecondHand } from './Page/SecondHandComponent';
 import {Layout} from './Page/LayoutComponent';
-import { Profile } from './Page/UserComponent';
+import { SideNav } from './Page/UserComponent';
 
 class App extends Component{
   constructor(props){
@@ -32,7 +32,7 @@ class App extends Component{
         <Route path="/information" component={Information} />
         <Route path="/society" component={Society} />
         <Route path="/secondhand" component={SecondHand} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/setting" component={SideNav} />
         <p>{this.state.apiResponse}</p>
         </Layout>
         </div>

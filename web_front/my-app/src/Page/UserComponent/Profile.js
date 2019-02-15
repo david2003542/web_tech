@@ -1,22 +1,18 @@
 import React from 'react'
-import {  Row, Col,Navbar, Nav } from 'react-bootstrap'
-import './Profile.css'
+import {  Card, ListGroup } from 'react-bootstrap'
 const Profile = () => (
   <div>
-      <Row>
-        <Col sm="3" className="left" >
-          <Navbar  expand="lg" variant='light'>
-            <Nav className="flex-column side-text">
-              <Navbar.Text className="text-center">Settings</Navbar.Text>
-              <Nav.Link >Personal Information</Nav.Link>
-              <Nav.Link >Message</Nav.Link>
-              <Nav.Link >Preference</Nav.Link>
-            </Nav>
-          </Navbar>
-        </Col>
-        <Col sm="9">
-        </Col>
-      </Row>
+    <Card className="mt-3 mr-3" >
+      <Card.Title className="text-center pt-3">User Profile</Card.Title>
+      <Card.Img className="pt-2 mb-3 mw-100"  variant="top" style={{height:'200px'}} src={process.env.PUBLIC_URL +'/images/user.svg'}></Card.Img>
+      <ListGroup className="justify-content-center" variant="flush">
+        <ListGroup.Item>User Acount Name: </ListGroup.Item>
+        <ListGroup.Item>Birth: </ListGroup.Item>
+        <ListGroup.Item>Major: </ListGroup.Item>
+        <ListGroup.Item>E-mail: </ListGroup.Item>
+      </ListGroup>
+
+    </Card>
   </div>
 );
 

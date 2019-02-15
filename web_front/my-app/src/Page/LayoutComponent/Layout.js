@@ -18,7 +18,7 @@ const Layout = (props) => (
              <Button variant="outline-success">Search</Button>
            </Form>
            <NavDropdown title="Settings" id="basic-nav-dropdown">
-             <NavDropdown.Item href="/profile">User Profile</NavDropdown.Item>
+             <NavDropdown.Item href="/setting/profile">User Profile</NavDropdown.Item>
              <NavDropdown.Item href="#action/3.2">Message</NavDropdown.Item>
              <NavDropdown.Item href="#action/3.3">Preference</NavDropdown.Item>
              <NavDropdown.Divider />
