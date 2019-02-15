@@ -11,7 +11,6 @@ const Profile = () => (
         <ListGroup.Item>Major: </ListGroup.Item>
         <ListGroup.Item>E-mail: </ListGroup.Item>
       </ListGroup>
-
     </Card>
   </div>
 );
