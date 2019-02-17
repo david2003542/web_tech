@@ -1,27 +1,34 @@
 import React from 'react'
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import {  Row, Col,Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav,Image, Container,Row,Col } from 'react-bootstrap'
 import './SideNav.css'
 import Profile from './Profile';
-const SideNav = () => (
-  <div>
-      <Row>
-        <Col sm="3" className="left" >
-          <Navbar  expand="lg" variant='light'>
-            <Nav className="flex-column text-center side-text pl-3 pt-3">
-              <Navbar.Text className="font-weight-bold">Settings</Navbar.Text>
-              <Nav.Link >My Profile</Nav.Link>
-              <Nav.Link >Message</Nav.Link>
-              <Nav.Link >Preference</Nav.Link>
-            </Nav>
-          </Navbar>
+const SideNav = (props) => (
+  <div> 
+    <Container>
+    <Row className="justify-content-md-center mt-2" >
+      <Image style={{height:'200px'}} src={process.env.PUBLIC_URL +'/images/user.svg'} rounded/>
+    </Row>
+    <Row className="justify-content-md-center">
+    <Navbar className="mt-2"  variant="light">
+      <Nav onSelect={selectedkey=>props.history.push(selectedkey)}
+       fill variant="tabs" defaultActiveKey="/setting/profile" className="text-center side-text" >
+          <Nav.Link href="/setting/profile">My Profile</Nav.Link>
+          <Nav.Link eventKey="/setting/message">Message</Nav.Link>
+          <Nav.Link eventKey="/setting/preference">Preference</Nav.Link>
+      </Nav>
+    </Navbar>
+    </Row>
+    <Row className="justify-content-md-center">
+    
+      <Switch>
+        <Col sm="5">
+        <Route path="/setting/profile" component={Profile} />
         </Col>
-        <Col sm="9">
-        <Switch>
-         <Route path="/setting/profile" component={Profile} />
-        </Switch>
-        </Col>
-      </Row>
+      </Switch>
+    
+    </Row>
+    </Container>
   </div>
 );
 
