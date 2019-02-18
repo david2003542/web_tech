@@ -1,18 +1,46 @@
-import React from 'react'
-import {  Card, ListGroup } from 'react-bootstrap'
-const Profile = () => (
-  <div>
-    <Card className="mt-3 mr-3" >
-      <Card.Title className="text-center pt-3">User Profile</Card.Title>
-      <Card.Img className="pt-2 mb-3 mw-100"  variant="top" style={{height:'200px'}} src={process.env.PUBLIC_URL +'/images/user.svg'}></Card.Img>
+import React,{Component} from 'react'
+import { ListGroup, Button, Image, Modal,  } from 'react-bootstrap'
+import ChangeProfile from './ChangeProfile';
+
+class Profile extends Component{
+  constructor(props, context){
+    super(props,context);
+    this.handleshow = this.handleshow.bind(this);
+    this.handleclose = this.handleclose.bind(this);
+    this.state = {
+      show :false,
+    }
+  }
+  handleclose (){
+    this.setState({show:false});
+  }
+  handleshow(){
+    this.setState({show:true});
+  }
+  render(){
+    return(
+      <div>
       <ListGroup className="justify-content-center" variant="flush">
-        <ListGroup.Item>User Acount Name: </ListGroup.Item>
+      <ListGroup.Item className="font-weight-bold text-center">My Profile </ListGroup.Item>
+        <ListGroup.Item>Acount: </ListGroup.Item>
+        <ListGroup.Item>Name: </ListGroup.Item>
+        <ListGroup.Item>Address: </ListGroup.Item>
         <ListGroup.Item>Birth: </ListGroup.Item>
         <ListGroup.Item>Major: </ListGroup.Item>
         <ListGroup.Item>E-mail: </ListGroup.Item>
       </ListGroup>
-    </Card>
+      <Button onClick={this.handleshow}  variant="light" className="mt-2 float-right"><Image src={process.env.PUBLIC_URL +'/images/edit.svg'}></Image></Button>
+      <Modal show={this.state.show} onHide={this.handleclose} >
+        <Modal.Header closeButton>Change Your Profile</Modal.Header>
+        <ChangeProfile></ChangeProfile>
+        <Modal.Footer>
+          <Button onClick={this.handleclose} className="float-right">Cancel</Button>
+          <Button className="float-right">Save</Button>
+        </Modal.Footer>
+      </Modal>
   </div>
-);
+  
+    )};
+}
 
 export default Profile
