@@ -1,6 +1,7 @@
 const models = require("../models")
-const User = models.User;
- 
+const User = models.user;
+
+// console.log(User)
 // // Post a User
 exports.create = (req, res) => {	
 	// Save to MariaDB database

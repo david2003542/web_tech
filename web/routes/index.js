@@ -3,12 +3,11 @@ var router = express.Router();
 
 
 /* GET home page. */
-const users = require('../controller/user.js')
+const users = require('../controller/user')
 router.get('/users', users.findAll);
-// router.get('/users', users.findById);
-// router.put('/users', users.update);
-// router.create('/users', users.create);
-// router.delete('/users', users.delete);
+// router.put('/users', users.findAll());
+// router.post('/users', users.create());
+// router.delete('/users', users.delete());
 
 
 
