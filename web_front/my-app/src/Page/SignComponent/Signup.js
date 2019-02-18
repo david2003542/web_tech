@@ -1,22 +1,24 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
+import ReactDOM from 'react-dom'
 
-let state = {
-  ForeName:"",
-  LastName:"",
-  userName:"",
-  birth:"",
-  email:"",
-  password:""
+const state = {
+  ForeName: '',
+  LastName: '',
+  userName: '',
+  birth: '',
+  email: '',
+  password: ''
 }
 
-let handleForeNameChange = (foreName) => {
-  this.state.foreName = foreName
-  console.log(state)
+const handleForeNameChange = (foreName) => {
+  state.foreName = foreName
+  this.setState(foreName)
+  // console.log(state)
 }
 
 
-let handleSubmit = () => {
+const handleSubmit = () => {
   console.log('submit')
 }
 
@@ -24,7 +26,7 @@ const Signup = () => (
   <Form>
     <Form.Group controlId="formForeName">
     <Form.Label>foreName</Form.Label>
-    <Form.Control type="text" placeholder="Enter foreName" onChange={handleForeNameChange} />
+    <Form.Control type="text" placeholder="Enter foreName" ref="foreName" onChange={handleForeNameChange('ff')} />
     </Form.Group>
 
     <Form.Group controlId="formLastName">

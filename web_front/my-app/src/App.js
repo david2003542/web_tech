@@ -34,6 +34,7 @@ class App extends Component{
         <Route path="/society" component={Society} />
         <Route path="/secondhand" component={SecondHand} />
         <Route path="/setting" component={SideNav} />
+        <Route path="/signup" component={Signup} />
         <p>{this.state.apiResponse}</p>
         </Layout>
         </div>
