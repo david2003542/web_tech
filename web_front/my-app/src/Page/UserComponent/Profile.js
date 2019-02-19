@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import { ListGroup, Button, Image, Modal,  } from 'react-bootstrap'
 import ChangeProfile from './ChangeProfile';
 import {withHandlers,withState,compose} from 'recompose'
