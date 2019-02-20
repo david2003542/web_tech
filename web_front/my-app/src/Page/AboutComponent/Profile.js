@@ -49,7 +49,7 @@ const Profile = () => (
           </Card>
         </Col>
       </Row>
-    </Container>
+    </Container>    
   </div>
 );
 
