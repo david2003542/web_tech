@@ -1,18 +1,9 @@
 import React from 'react'
 import { ListGroup, Button, Image, Modal,  } from 'react-bootstrap'
 import ChangeProfile from './ChangeProfile';
-import {withHandlers,withState,compose} from 'recompose'
 
-const withShow = compose(
-  withState('isShow','click',false),
-  withHandlers(
-    {
-      show: ({click})=> (e)=> click(true),
-      hide: ({click})=> (e)=> click(false),
-    }
-  )
-)
-const Profile = withShow(({isShow,show,hide})=>
+
+const Profile = ()=>(
 <div>
       <ListGroup className="justify-content-center" variant="flush">
       <ListGroup.Item className="font-weight-bold text-center">My Profile </ListGroup.Item>
@@ -23,12 +14,12 @@ const Profile = withShow(({isShow,show,hide})=>
         <ListGroup.Item>Major: </ListGroup.Item>
         <ListGroup.Item>E-mail: </ListGroup.Item>
       </ListGroup>
-      <Button onClick={show}  variant="light" className="mt-2 float-right"><Image src={process.env.PUBLIC_URL +'/images/edit.svg'}></Image></Button>
-      <Modal show={isShow} onHide={hide} >
+      <Button   variant="light" className="mt-2 float-right"><Image src={process.env.PUBLIC_URL +'/images/edit.svg'}></Image></Button>
+      <Modal  >
         <Modal.Header closeButton>Change Your Profile</Modal.Header>
         <ChangeProfile></ChangeProfile>
         <Modal.Footer>
-          <Button onClick={hide} className="float-right">Cancel</Button>
+          <Button  className="float-right">Cancel</Button>
           <Button className="float-right">Save</Button>
         </Modal.Footer>
       </Modal>
@@ -72,7 +63,7 @@ const Profile = withShow(({isShow,show,hide})=>
 //         </Modal.Footer>
 //       </Modal>
 //   </div>
-  
+
 //     )};
 // }
 
