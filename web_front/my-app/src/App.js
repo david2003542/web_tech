@@ -5,7 +5,7 @@ import { Society, Home } from './Page/HomeComponent';
 import { Information} from './Page/InformationComponent';
 import { SecondHand } from "./Page/SecondHandComponent";
 import { Signup } from "./Page/SignComponent";
-import {Layout} from './Page/LayoutComponent';
+import { Layout } from './Page/LayoutComponent';
 import { SideNav } from './Page/UserComponent';
 
 class App extends Component{
