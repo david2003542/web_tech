@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "root",
+    "password": "example",
+    "database": "web",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306,
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "web",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "example",
+    "database": "web",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
