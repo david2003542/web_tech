@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import ReactDOM from 'react-dom'
+import {withHandlers,withReducer,compose} from 'recompose'
 
 const state = {
   ForeName: '',
