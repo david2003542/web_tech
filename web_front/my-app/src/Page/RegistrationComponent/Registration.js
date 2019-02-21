@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
-import {Card, Container, Row, Col, Button, Navbar, Nav, Image, Jumbotron } from 'react-bootstrap';
+import {Card, Container, Row, Col, Button, Navbar,  Jumbotron } from 'react-bootstrap';
 import './Registration.css'
 
 const Reg = () => (
@@ -16,7 +16,7 @@ const Reg = () => (
       />
       {'Welcome to the Bristol Social Network'}
     </Navbar.Brand>
-    // Nav.Link
+    {/* // Nav.Link */}
     <Link to = "/signin">
       <Button sm="4" variant = "light">Sign in</Button>
     </Link>
