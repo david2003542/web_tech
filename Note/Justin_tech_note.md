@@ -29,7 +29,7 @@
 ### Arrow Function 
  - **Note Later**
 
-### RXJS 
+### [RXJS](https://rxjs-dev.firebaseapp.com/guide/overview) 
 - Combine Observer pattern with the Iterator pattern and functional programming with collections
     - Observer: 
       The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
@@ -42,5 +42,9 @@
   - Operatiors: pure functions that enable a functional programming style of dealing with collections with operations 
   - Subjects: EventEmitter, and the only way of multicasting a value or event to multiple Observers.
   - Schedulers: centralized dispatchers to control concurrency, allowing us to coordinate when computation happens on e.g. setTimeout or requestAnimationFrame or others.
+
+
+### [Redux-Observable](https://redux-observable.js.org/docs/basics/Epics.html)
+
 
 
