@@ -38,14 +38,21 @@
   - tie state and action together, we write a function called a reducer. 
 - Three Principles
 1. Single Source of Truth
-- The state of your whole application is stored in an object tree within a single store.
+  - The state of your whole application is stored in an object tree within a single store.
 2. State is read-only
-- The only way to change the state is to emit an action, an object describing what happened.
+  - The only way to change the state is to emit an action, an object describing what happened.
 3. Changes are made with pure functions
 
 - Actions
-
-
+ - Actions are payloads of information that send data from your application to your store. 
+ -  Actions must have a type property that indicates the type of action being performed.
+  - Types should typically be defined as string constants.
+  - Keep codebase clean. [Reducing Boilderplate](https://redux.js.org/recipes/reducing-boilerplate)
+  - We refer to a particular todo by index because we store them in an array. In a real app, it is wiser to generate a unique ID every time something new is created.
+ - Action Creators 
+  - Function create actions 
+  - Triger dispatch by passing the result to `dispatch()`
+  - [Example Code](https://redux.js.org/basics/actions#actionsjs)
 ### [RXJS](https://rxjs-dev.firebaseapp.com/guide/overview) 
 - Combine Observer pattern with the Iterator pattern and functional programming with collections
     - Observer: 
