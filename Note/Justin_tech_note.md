@@ -29,6 +29,23 @@
 ### Arrow Function 
  - **Note Later**
 
+### [Redux](https://redux.js.org/introduction/getting-started)
+- Motivation 
+ - Lose control over when you manage ever-changing state
+- Core Concepts
+  - state is described as a plain object, which doesn't have setters
+  - To change the state, you need to dispatch an action. 
+  - tie state and action together, we write a function called a reducer. 
+- Three Principles
+1. Single Source of Truth
+- The state of your whole application is stored in an object tree within a single store.
+2. State is read-only
+- The only way to change the state is to emit an action, an object describing what happened.
+3. Changes are made with pure functions
+
+- Actions
+
+
 ### [RXJS](https://rxjs-dev.firebaseapp.com/guide/overview) 
 - Combine Observer pattern with the Iterator pattern and functional programming with collections
     - Observer: 
