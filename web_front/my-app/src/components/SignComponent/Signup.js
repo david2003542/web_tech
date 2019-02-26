@@ -13,9 +13,9 @@ const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  propTypes = {
-    onSave: PropTypes.func.isRequired,
-  }
+  // propTypes = {
+  //   onSave: PropTypes.func.isRequired,
+  // }
   
   const handleSubmit = () => {
     const formValues = {
