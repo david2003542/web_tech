@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Form, Button } from 'react-bootstrap'
-import { User } from '../../service/'
+// import { User } from '../../service/'
 import PropTypes from 'prop-types'
 
 // const [foreName, setForeName] = useState('')
@@ -26,7 +26,7 @@ const Signup = () => {
       email,
       password
     }
-    User.createUser(formValues)
+    // User.createUser(formValues)
   }
 
   return(
