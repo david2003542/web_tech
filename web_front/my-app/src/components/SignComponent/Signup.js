@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Form, Button } from 'react-bootstrap'
 // import { User } from '../../service/'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 // const [foreName, setForeName] = useState('')
 
