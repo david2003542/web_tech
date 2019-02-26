@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputGroup ,FormControl} from 'react-bootstrap'
+import { InputGroup, FormControl} from 'react-bootstrap'
 // import {SingleDatePicker} from 'react-dates';
 
 const ChangeProfile = () => (

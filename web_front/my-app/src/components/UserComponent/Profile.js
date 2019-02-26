@@ -1,13 +1,8 @@
 import React , { useState } from 'react'
 import { ListGroup, Button, Image, Modal,  } from 'react-bootstrap'
 import ChangeProfile from './ChangeProfile';
-import {Observable} from 'rxjs'
 
-const foo = new Observable (subscriber=>{
-  console.log('hello');
-  subscriber.next(42);
-});
-foo.subscribe(x=>{console.log(x)})
+
 const Profile = ()=>{
   const [Display, setDisplay] = useState(false);
   return(

@@ -5,11 +5,10 @@ import { Society, Home } from './components/HomeComponent';
 import { Information} from './components/InformationComponent';
 import { SecondHand } from "./components/SecondHandComponent";
 import { Reg } from "./components/RegistrationComponent";
-import {Signin } from "./components/SignComponent";
+import { } from "./components/SignComponent";
 import { Signup } from "./components/SignComponent";
 import { Layout } from './components/LayoutComponent';
 import { SideNav } from './components/UserComponent';
-
 
 
 class App extends Component{

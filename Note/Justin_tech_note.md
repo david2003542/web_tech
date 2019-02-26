@@ -43,6 +43,14 @@
   - The only way to change the state is to emit an action, an object describing what happened.
 3. Changes are made with pure functions
 
+
+- Reducer 
+    - a pure function with (state, action) => state signature.
+    - It describes how an action transforms the state into the next state.
+    - The shape of the state is up to you: it can be a primitive, an array, an object, or even an Immutable.js data structure. 
+    - The only important part is that you should not mutate the state object, but return a new object if the state changes.
+
+
 - Actions
  - Actions are payloads of information that send data from your application to your store. 
  -  Actions must have a type property that indicates the type of action being performed.
@@ -53,6 +61,13 @@
   - Function create actions 
   - Triger dispatch by passing the result to `dispatch()`
   - [Example Code](https://redux.js.org/basics/actions#actionsjs)
+
+
+
+
+
+
+
 ### [RXJS](https://rxjs-dev.firebaseapp.com/guide/overview) 
 - Combine Observer pattern with the Iterator pattern and functional programming with collections
     - Observer: 
@@ -71,4 +86,11 @@
 ### [Redux-Observable](https://redux-observable.js.org/docs/basics/Epics.html)
 
 
-
+###Github merge
+ git fetch origin
+ git checkout -b master origin/master
+ git merge Justin
+ git commit -am "solve conflict"
+ git checkout Justin
+ git  merge --no-ff master
+ git push origin Justin

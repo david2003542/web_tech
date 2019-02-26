@@ -1,6 +1,6 @@
 import React, {Component } from 'react'
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import { Navbar, Nav,Image, Container,Row,Col } from 'react-bootstrap'
+import { Navbar, Nav, Image, Container, Row, Col } from 'react-bootstrap'
 import './SideNav.css'
 import Profile from './Profile';
 

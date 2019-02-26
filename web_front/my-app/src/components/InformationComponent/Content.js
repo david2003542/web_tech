@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from 'react-bootstrap';
+import {  } from 'react-bootstrap';
 
 const Content= () => (
   <div>
