@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./mariadb/data:/var/lib/mysql
+      - ./mariadb/custom:/etc/mysql/conf.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
