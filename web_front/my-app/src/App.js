@@ -12,7 +12,6 @@ import { SideNav } from './components/UserComponent';
 
 
 
-
 class App extends Component{
   constructor(props){
     super(props);
@@ -35,7 +34,6 @@ class App extends Component{
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/registration" component={Reg} />
-        <Route path="/signin" component={Signin} />
         <Route path="/information" component={Information} />
         <Route path="/society" component={Society} />
         <Route path="/secondhand" component={SecondHand} />
