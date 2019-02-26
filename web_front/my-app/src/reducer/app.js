@@ -18,4 +18,4 @@ const app = (state = [], action) => {
     }
   }
   
-  export default todos
+  export default app
