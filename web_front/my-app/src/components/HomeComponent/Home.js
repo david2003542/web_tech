@@ -28,10 +28,10 @@ const Home = () => (
         </Col>
       </Row>
     </Container>
-    
+
   </div>
 
 );
-    
+
 
 export default Home

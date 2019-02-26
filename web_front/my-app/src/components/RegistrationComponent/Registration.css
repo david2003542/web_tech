@@ -1,0 +1,30 @@
+#bg {
+background-image: url("/images/bridge.jpg");
+opacity: 1;
+height: 50vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+top: 0;
+bottom: 50;
+z-index: -10;
+}
+
+#navbar {
+ min-height: 80px;
+}
+
+#navbar-brand {
+  padding: 0 15px;
+  height: 75px;
+  line-height: 60px;
+}
+
+#navbar-footer {
+  text-align: center;
+}
+
+.jumbotron{
+  background-color: transparent;
+  text-align: center;
+}
