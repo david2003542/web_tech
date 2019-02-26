@@ -1,12 +1,7 @@
 const models = require("../models")
-<<<<<<< HEAD
-const User = models.User;
- 
-=======
 const User = models.user;
 
 // console.log(User)
->>>>>>> d77fc9fde4bb3985b2289ff92bd6759ff6ec1f46
 // // Post a User
 exports.create = (req, res) => {	
 	// Save to MariaDB database
