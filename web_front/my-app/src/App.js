@@ -1,66 +1,49 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Home, About } from './components';
-
-const BasicExample = () => (
-  <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
-
-      <hr />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
-    </div>
-  </Router>
-);
+import React, {Component }from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { About } from './components/AboutComponent';
+import { Society, Home } from './components/HomeComponent';
+import { Information} from './components/InformationComponent';
+import { SecondHand } from "./components/SecondHandComponent";
+import { Signup } from "./components/SignComponent";
+import { Layout } from './components/LayoutComponent';
+import { SideNav } from './components/UserComponent';
+import { Reg } from "./components/RegistrationComponent";
 
 
-// const About = () => (
-//   <div>
-//     <h2>About</h2>
-//   </div>
-// );
 
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {apiResponse:""};
+  }
+  callAPI (){
+    fetch("http://localhost:8000/graphql?query={query:hello}")
+    .then(res=>res.text())
+    .then(res=>this.setState({apiResponse:res}))
+    .catch(err=>err);
+  }
+  componentWillMount(){
+    this.callAPI();
+  }
+  render(){
+    return(
+      <Router>
+        <div>
+        <Layout>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/registration" component={Reg} />
+        <Route path="/information" component={Information} />
+        <Route path="/society" component={Society} />
+        <Route path="/secondhand" component={SecondHand} />
+        <Route path="/setting" component={SideNav} />
+        <Route path="/signup" component={Signup} />
+        <p>{this.state.apiResponse}</p>
+        </Layout>
+        </div>
+      </Router>
+    );
+  }
+}
 
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
-);
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-);
-
-export default BasicExample;
+export default App;
