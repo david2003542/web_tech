@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Form, Button } from 'react-bootstrap'
-
+// import { User } from '../../service/'
+// import PropTypes from 'prop-types'
 
 // const [foreName, setForeName] = useState('')
 
@@ -11,6 +12,22 @@ const Signup = () => {
   const [birth, setBirth] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  // propTypes = {
+  //   onSave: PropTypes.func.isRequired,
+  // }
+  
+  const handleSubmit = () => {
+    const formValues = {
+      foreName,
+      lastName,
+      userName,
+      birth,
+      email,
+      password
+    }
+    // User.createUser(formValues)
+  }
 
   return(
     <Form>
@@ -46,7 +63,7 @@ const Signup = () => {
       <Form.Label>Password</Form.Label>
       <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
       </Form.Group>
-      <Button variant="primary" type="button">
+      <Button variant="primary" type="button" onClick={handleSubmit}>
       Submit
       </Button>
     </Form>

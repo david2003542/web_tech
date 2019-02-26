@@ -1,14 +1,15 @@
 import React, {Component }from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { About } from './Page/AboutComponent';
-import { Society, Home } from './Page/HomeComponent';
-import { Information} from './Page/InformationComponent';
-import { SecondHand } from "./Page/SecondHandComponent";
-import { Reg } from "./Page/RegistrationComponent";
-import {Signin } from "./Page/SignComponent";
-import { Signup } from "./Page/SignComponent";
-import { Layout } from './Page/LayoutComponent';
-import { SideNav } from './Page/UserComponent';
+import { About } from './components/AboutComponent';
+import { Society, Home } from './components/HomeComponent';
+import { Information} from './components/InformationComponent';
+import { SecondHand } from "./components/SecondHandComponent";
+import { Reg } from "./components/RegistrationComponent";
+import {Signin } from "./components/SignComponent";
+import { Signup } from "./components/SignComponent";
+import { Layout } from './components/LayoutComponent';
+import { SideNav } from './components/UserComponent';
+
 
 
 
